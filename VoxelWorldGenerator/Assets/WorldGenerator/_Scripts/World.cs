@@ -30,8 +30,8 @@ public class World : MonoBehaviour
             {
                 ChunkData data = new ChunkData(chunkSize, chunkHeight, this, new Vector3Int(x * chunkSize, 0, z * chunkSize));
                 //GenerateVoxels(data);
-				ChunkData newData = terrainGenerator.GenerateChunkData(data, mapSeedOffset);
-                chunkDataDictionary.Add(newData.worldPosition, newData);
+				terrainGenerator.GenerateChunkData(data, mapSeedOffset);
+                //chunkDataDictionary.Add(newData.worldPosition, newData);
             }
         }
 

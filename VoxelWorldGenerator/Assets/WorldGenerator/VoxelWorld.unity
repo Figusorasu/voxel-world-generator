@@ -849,6 +849,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2052627535}
   - component: {fileID: 2052627534}
+  - component: {fileID: 2052627536}
+  - component: {fileID: 2052627537}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -871,10 +873,10 @@ MonoBehaviour:
   mapSizeInChunks: 6
   chunkSize: 16
   chunkHeight: 100
-  waterThreshold: 39
-  noiseScale: 0.01
   chunkPrefab: {fileID: 3912130150203888415, guid: 86bf0b64f2d716046a039c0618b69ce0,
     type: 3}
+  terrainGenerator: {fileID: 2052627536}
+  mapSeedOffset: {x: 0, y: 0}
 --- !u!4 &2052627535
 Transform:
   m_ObjectHideFlags: 0
@@ -890,3 +892,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2052627536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052627533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24fd06e7c53a2e84b809e6c1de49a5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeGenerator: {fileID: 2052627537}
+--- !u!114 &2052627537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052627533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015e2f3ad4a67354d99a10f24efc4ce9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterThreshold: 50
+  noiseScale: 0.03
